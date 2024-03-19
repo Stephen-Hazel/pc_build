@@ -1,0 +1,216 @@
+{
+  "id" : "app.pianocheetah.pianocheetah",
+  "runtime" : "org.kde.Platform",
+  "runtime-version" : "6.6",
+  "runtime-commit" : "d9a07ad16df6b5858f924014ae6bc0803035276bd317da79e4a36bae2f68790b",
+  "sdk" : "org.kde.Sdk",
+  "sdk-commit" : "e2be720db7257dab643d96d8603a2213565ae65fcccb0b38941bb7bfb3cfaf3a",
+  "build-options" : {
+    "strip" : true,
+    "no-debuginfo" : true
+  },
+  "command" : "pianocheetah",
+  "modules" : [
+    {
+      "name" : "_meta",
+      "buildsystem" : "simple",
+      "sources" : [
+        {
+          "path" : "_meta",
+          "type" : "dir"
+        }
+      ],
+      "build-commands" : [
+        "cp -pr share /app"
+      ]
+    },
+    {
+      "name" : "ll",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "sources" : [
+        {
+          "path" : "ll",
+          "type" : "dir"
+        },
+        {
+          "dest" : "stv",
+          "path" : "../stv",
+          "type" : "dir"
+        }
+      ]
+    },
+    {
+      "name" : "sfz2syn",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "sources" : [
+        {
+          "path" : "sfz2syn",
+          "type" : "dir"
+        },
+        {
+          "dest" : "stv",
+          "path" : "../stv",
+          "type" : "dir"
+        }
+      ]
+    },
+    {
+      "name" : "synsnd",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "sources" : [
+        {
+          "path" : "synsnd",
+          "type" : "dir"
+        },
+        {
+          "dest" : "stv",
+          "path" : "../stv",
+          "type" : "dir"
+        }
+      ]
+    },
+    {
+      "name" : "midimp",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "sources" : [
+        {
+          "path" : "midimp",
+          "type" : "dir"
+        },
+        {
+          "dest" : "stv",
+          "path" : "../stv",
+          "type" : "dir"
+        }
+      ]
+    },
+    {
+      "name" : "mid2song",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "sources" : [
+        {
+          "path" : "mid2song",
+          "type" : "dir"
+        },
+        {
+          "dest" : "stv",
+          "path" : "../stv",
+          "type" : "dir"
+        }
+      ]
+    },
+    {
+      "name" : "txt2song",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "sources" : [
+        {
+          "path" : "txt2song",
+          "type" : "dir"
+        },
+        {
+          "dest" : "stv",
+          "path" : "../stv",
+          "type" : "dir"
+        }
+      ]
+    },
+    {
+      "name" : "mod2song",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "sources" : [
+        {
+          "path" : "mod2song",
+          "type" : "dir"
+        },
+        {
+          "dest" : "stv",
+          "path" : "../stv",
+          "type" : "dir"
+        }
+      ]
+    },
+    {
+      "name" : "initme",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "sources" : [
+        {
+          "path" : "initme",
+          "type" : "dir"
+        },
+        {
+          "dest" : "stv",
+          "path" : "../stv",
+          "type" : "dir"
+        }
+      ]
+    },
+    {
+      "name" : "midicfg",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "sources" : [
+        {
+          "path" : "midicfg",
+          "type" : "dir"
+        },
+        {
+          "dest" : "stv",
+          "path" : "../stv",
+          "type" : "dir"
+        }
+      ]
+    },
+    {
+      "name" : "pianocheetah",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "sources" : [
+        {
+          "path" : "pianocheetah",
+          "type" : "dir"
+        },
+        {
+          "dest" : "stv",
+          "path" : "../stv",
+          "type" : "dir"
+        }
+      ]
+    }
+  ],
+  "finish-args" : [
+    "--filesystem=host",
+    "--share=ipc",
+    "--share=network",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--socket=pulseaudio"
+  ]
+}
