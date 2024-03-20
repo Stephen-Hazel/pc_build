@@ -17,8 +17,8 @@
          "name": "cp_to_app",
          "buildsystem": "simple",
          "build-commands": [
-            "cp -pr _build/files/share /app",
-            "cp -pr _build/files/bin   /app"
+            "cp -pr share /app",
+            "cp -pr bin   /app"
          ],
          "sources": [
             {
