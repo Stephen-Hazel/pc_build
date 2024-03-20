@@ -17,13 +17,14 @@
          "name": "cp_to_app",
          "buildsystem": "simple",
          "build-commands": [
-            "cp -pr share /app",
-            "cp -pr bin   /app"
+            "cp -pr _build/files/share /app",
+            "cp -pr _build/files/bin   /app"
          ],
          "sources": [
             {
-               "type": "dir",
-               "path": "_build/files"
+               "type": "git",
+               "url": "https://github.com/Stephen-Hazel/pc_build.git",
+               "branch": "main"
             }
          ]
       }
